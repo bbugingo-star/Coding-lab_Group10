@@ -69,11 +69,11 @@ initialize_system() {
 secure_data() { 
 
 
-    echo "Securing active_logs directory..."
+    echo "[SECURITY] Restricting access to active_logs..."
     # Restrict access to owner only
     chmod 600 active_logs
 
-    echo "Current permissions:"
+    echo "[INFO] Updated permissions:"
     # Display updated permissions
     ls -ld active_logs
 
