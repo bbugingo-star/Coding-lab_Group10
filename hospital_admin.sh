@@ -70,10 +70,11 @@ secure_data() {
 
 
     echo "Securing active_logs directory..."
-
+    # Restrict access to owner only
     chmod 600 active_logs
 
     echo "Current permissions:"
+    # Display updated permissions
     ls -ld active_logs
 
 }
