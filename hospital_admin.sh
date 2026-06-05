@@ -66,8 +66,17 @@ initialize_system() {
 # Function: secure_data()
 # Placeholder — to be implemented by Member 2
 # ------------------------------------------------------------
-secure_data() {
-    echo "[INFO] secure_data() — awaiting Member 2 implementation."
+secure_data() { 
+
+
+    echo "[SECURITY] Restricting access to active_logs..."
+    # Restrict access to owner only
+    chmod 600 active_logs
+
+    echo "[INFO] Updated permissions:"
+    # Display updated permissions
+    ls -ld active_logs
+
 }
 
 
