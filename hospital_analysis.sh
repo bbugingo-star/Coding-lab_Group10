@@ -9,7 +9,7 @@ water_audit() {
         return 1
     fi
 
-    avg=$(awk -F " | " '$2 == "ICU_WATER_RESERVE" { sum += $3; count++ } END { if (count > 0) printf "%.2f", sum/count }' "$log_file")
+    avg=$(awk -F ' \\| ' '$2 == "ICU_WATER_RESERVE" { sum += $3; count++ } END { if (count > 0) printf "%.2f", sum/count }' active_logs/water_usage.log)
 
     echo "=============================="
     echo "   KNH WATER AUDIT REPORT"
