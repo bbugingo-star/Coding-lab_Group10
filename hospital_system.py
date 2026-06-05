@@ -100,10 +100,25 @@ def stop():
     else:
         print("No running system found.")
 
+def orchestrate_system():
+    """Member 3 - The Orchestrator: calls initialize_system() and secure_data() in order."""
+
+    # Call Member 1's function
+    initialize_system()
+
+    # Call Member 2's function
+    secure_data()
+
+    # Print final confirmation with current date
+    os.system("echo 'System Environment Secured'")
+    os.system("echo 'Date: ' $(date)")
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: ./hospital_system.py [start|stop]")
+        print("Usage: ./hospital_system.py [start|stop|vitals|orchestrate]")
         sys.exit(1)
     cmd = sys.argv[1].lower()
     if cmd == "start": start()
     elif cmd == "stop": stop()
+    elif cmd == "vitals": process_vitals()
+    elif cmd == "orchestrate": orchestrate_system()
