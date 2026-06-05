@@ -18,9 +18,9 @@ DEVICES = {
 }
 
 LOGS = {
-    "heart": os.path.join(LOG_DIR, "heart_rate_log.log"),
-    "temp": os.path.join(LOG_DIR, "temperature_log.log"),
-    "water": os.path.join(LOG_DIR, "water_usage_log.log")
+    "heart": os.path.join(LOG_DIR, "heart_rate.log"),
+    "temp": os.path.join(LOG_DIR, "temperature.log"),
+    "water": os.path.join(LOG_DIR, "water_usage.log")
 }
 
 def ensure_environment():
